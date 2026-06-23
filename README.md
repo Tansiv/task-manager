@@ -1,6 +1,6 @@
 # Task Manager
 
-![Task Manager GIF](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
+![Task Manager GIF](https://giphy.com/gifs/motivation-todo-to-do-lxsQ9dLbw1kTSVS9rt)
 
 A clean and modern task management app with a React + Vite frontend and a Node.js + Express backend. This repository includes a PostgreSQL-powered API for creating, updating, and deleting tasks with a polished user interface.
 
