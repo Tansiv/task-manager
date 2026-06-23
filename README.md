@@ -33,16 +33,6 @@ It was designed as a portfolio-ready project with a clean UI, responsive layout,
 
 ---
 
-## Live Preview
-
-If you are showcasing this project on GitHub, replace the image below with a deployed demo link or a GIF capture.
-
-<p align="center">
-  <img src="frontend/public/Dashboard.png" alt="Task Manager screenshot" width="100%" />
-</p>
-
----
-
 ## Tech Stack
 
 | Layer | Technology |
