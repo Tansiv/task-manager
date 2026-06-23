@@ -1,0 +1,22 @@
+### Get all tasks
+GET http://localhost:5000/api/tasks
+
+### Create a task
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Write README",
+  "description": "Document setup steps",
+  "status": "To Do"
+}
+
+### Update task status (replace 1 with real id from GET response)
+PATCH http://localhost:5000/api/tasks/2
+Content-Type: application/json
+
+{
+  "status": "In Progress"
+}
+### Delete a task (replace 1 with real id)
+DELETE http://localhost:5000/api/tasks/2
