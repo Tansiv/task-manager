@@ -19,7 +19,7 @@ This project demonstrates a well-structured full-stack task manager:
 
 ## 🧪 Live Preview
 
-![Task Manager Screenshot](frontend/public/screenshot.svg)
+![Task Manager Screenshot](frontend/public/ss.png)
 
 ---
 
