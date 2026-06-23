@@ -1,26 +1,42 @@
 # Task Manager
 
-![Task Manager GIF](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXVmbG02bmQ1ZGw1MmRreG5meXQ3MmhmcHVldjVkd241d2J6MTRoaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4ytUZzb1pRPBS/giphy.gif)
+![Task Manager Demo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXVmbG02bmQ1ZGw1MmRreG5meXQ3MmhmcHVldjVkd241d2J6MTRoaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4ytUZzb1pRPBS/giphy.gif)
 
-A clean and modern task management app with a React + Vite frontend and a Node.js + Express backend. This repository includes a PostgreSQL-powered API for creating, updating, and deleting tasks with a polished user interface.
+A polished task management application built with React, Vite, Node.js, Express, and PostgreSQL. Manage tasks easily with create, update, and delete actions supported by a clean UI and REST API.
+
+---
+
+## ✨ Overview
+
+This project demonstrates a well-structured full-stack task manager:
+
+- React frontend with component-based UI
+- Express backend exposing REST endpoints
+- PostgreSQL database for task persistence
+- Lightweight Vite development workflow
+
+---
+
+## 🧪 Live Preview
+
+![Task Manager Screenshot](frontend/public/screenshot.svg)
 
 ---
 
 ## 🚀 Features
 
-- Add new tasks with title and optional description
-- Update task status between `To Do`, `In Progress`, and `Done`
-- Delete tasks with confirmation
-- Responsive UI built with React components
-- REST API integration using Express and PostgreSQL
-- Simple, maintainable file structure for frontend and backend
+- Create tasks with title and optional description
+- Change task status: `To Do`, `In Progress`, `Done`
+- Delete tasks safely with confirmation
+- Real-time task list updates in the browser
+- Clean frontend/backend separation
 
 ---
 
 ## 🧩 Tech Stack
 
 | Layer | Technology |
-|---|---|
+| --- | --- |
 | Frontend | React 19, Vite, JavaScript |
 | Backend | Node.js, Express, PostgreSQL |
 | Database | PostgreSQL |
@@ -40,6 +56,7 @@ backend/
   └─ package.json
 frontend/
   ├─ public/
+  │   └─ screenshot.svg
   ├─ src/
   │   ├─ api/tasks.js
   │   ├─ components/
@@ -56,9 +73,9 @@ README.md
 
 ---
 
-## 🛠️ Setup Instructions
+## 🛠️ Setup Guide
 
-### 1. Clone the repository
+### 1. Clone repository
 
 ```bash
 git clone https://github.com/<your-username>/task-manager.git
@@ -72,7 +89,7 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in `backend/` with the database connection values:
+Create `backend/.env`:
 
 ```env
 DB_USER=your_db_user
@@ -83,13 +100,13 @@ DB_NAME=your_database_name
 PORT=5000
 ```
 
-Initialize the PostgreSQL schema:
+Create the PostgreSQL table:
 
 ```bash
 psql -U your_db_user -d your_database_name -f schema.sql
 ```
 
-Start the backend server:
+Start the backend:
 
 ```bash
 npm run dev
@@ -97,7 +114,7 @@ npm run dev
 
 ### 3. Frontend setup
 
-Open a new terminal and run:
+In a separate terminal:
 
 ```bash
 cd frontend
@@ -105,36 +122,37 @@ npm install
 npm run dev
 ```
 
-The app should be available at:
+Open the app at:
 
 ```text
 http://localhost:5175
 ```
 
-> By default, the frontend expects the backend API at `http://localhost:5000/api/tasks`.
-
 ---
 
-## 🧪 API Endpoints
+## 🔌 API Reference
 
-### Get all tasks
+### Fetch tasks
+
 - `GET /api/tasks`
 
-### Create a new task
+### Create a task
+
 - `POST /api/tasks`
-- Body example:
+- Request body:
 
 ```json
 {
   "title": "Write README",
-  "description": "Create a professional README for the app",
+  "description": "Add a clear project README",
   "status": "To Do"
 }
 ```
 
-### Update a task status
+### Update task status
+
 - `PATCH /api/tasks/:id`
-- Body example:
+- Request body:
 
 ```json
 {
@@ -143,37 +161,44 @@ http://localhost:5175
 ```
 
 ### Delete a task
+
 - `DELETE /api/tasks/:id`
 
 ---
 
 ## ✅ Notes
 
-- Task status is restricted to `To Do`, `In Progress`, and `Done`
-- Titles are limited to 150 characters and cannot be empty
-- The backend uses `created_at` timestamps for sorting tasks
+- `status` values: `To Do`, `In Progress`, `Done`
+- `title` is required and max 150 characters
+- `description` is optional
+- Data is sorted by creation time in the backend
 
 ---
 
 ## 📌 Scripts
 
 ### Backend
-- `npm run dev` - start backend with `nodemon`
-- `npm start` - start backend with Node.js
+- `npm run dev` — start backend with `nodemon`
+- `npm start` — start backend with Node.js
 
 ### Frontend
-- `npm run dev` - start the frontend development server
-- `npm run build` - build the production frontend bundle
-- `npm run preview` - preview the production build
+- `npm run dev` — start Vite dev server
+- `npm run build` — build production frontend
+- `npm run preview` — preview production build
 
 ---
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-Feel free to improve the UI, add authentication, or enhance task filtering and sorting.
+Enhancements you can add:
+
+- Task filtering and search
+- Authentication and user sessions
+- Task categories or due dates
+- Deployment to cloud hosting
 
 ---
 
-## 📚 License
+## 📄 License
 
 This project is free to use and modify.
